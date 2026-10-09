@@ -2,6 +2,12 @@
 
 Repositorio del curso MCDI501 Estadística Computacional (Magíster en Ciencia de Datos e IA, UNAB).
 
+**Grupo 4**
+
+- Jeremmy Díaz Alfaro
+- Karim Zaid Sánchez
+- Laura Arenas Kosin
+
 ## Dataset
 
 Usamos el dataset **Rain in Australia** (`weatherAUS.csv`) de Kaggle:
