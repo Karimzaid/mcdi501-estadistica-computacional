@@ -20,7 +20,8 @@ mcdi501-estadistica-computacional/
 │   ├── raw/            # datos originales (weatherAUS.csv)
 │   └── processed/      # datos procesados
 ├── notebooks/
-│   └── 01_carga_datos.ipynb
+│   └── 01_formativa1_eda.ipynb   # carga, estadística descriptiva y figuras
+├── figuras/            # figuras que genera el notebook
 ├── src/
 │   └── carga_datos.py  # funciones para cargar y revisar los datos
 ├── requirements.txt
@@ -32,9 +33,9 @@ mcdi501-estadistica-computacional/
 ```bash
 python -m venv .venv
 .venv\Scripts\activate        # en Windows
-pip install -r requirements.txt
-jupyter lab
+python -m pip install -r requirements.txt
+python -m jupyterlab
 ```
 
-Después abrir `notebooks/01_carga_datos.ipynb` y ejecutar todo (Restart & Run All).
+Después abrir `notebooks/01_formativa1_eda.ipynb` y ejecutar todo (Restart & Run All).
 Las rutas son relativas, así que funciona en cualquier computador que clone el repo.
