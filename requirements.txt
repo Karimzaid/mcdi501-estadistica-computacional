@@ -3,3 +3,5 @@ numpy>=1.26
 matplotlib>=3.8
 jupyterlab>=4.0
 ipykernel>=6.29
+scipy>=1.12
+nbstripout>=0.7
