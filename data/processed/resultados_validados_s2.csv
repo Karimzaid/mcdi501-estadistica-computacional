@@ -1,0 +1,9 @@
+Resultado,Validación en S2,Estado
+Temperatura máxima media,"Clásico, percentil y BCa coinciden",Robusto
+Humedad media 3 pm,"Clásico, percentil y BCa coinciden",Robusto
+Lluvia diaria media,"Intervalos coinciden, pero la media es muy sensible a días extremos",Cautela: preferir mediana
+Proporción de lluvia mañana,IC por días muy estrecho; por ciudad mucho más ancho,Robusto como promedio; varía por ciudad
+Welch humedad (S1),"Permutación p < 0,001; se cumple en todas las ciudades",Robusto
+Chi² nubosidad (S1),"Permutación p < 0,001; ~40 % faltante no al azar",Robusto en estaciones que miden nubes
+Correlaciones de la S1,"IC bootstrap estrechos, ninguno cruza 0",Robustas (Temp 9 am muy débil)
+"Persistencia de la lluvia (46,4 % vs 15,2 %)",Monte Carlo reproduce la proporción observada,Robusto

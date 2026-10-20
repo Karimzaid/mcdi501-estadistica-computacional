@@ -18,10 +18,11 @@ https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
 mcdi501-estadistica-computacional/
 ├── data/
 │   ├── raw/            # datos originales (weatherAUS.csv)
-│   └── processed/      # datos procesados
+│   └── processed/      # datos procesados y resultados validados de la S2
 ├── notebooks/
-│   ├── 01_formativa1_eda.ipynb     # carga, estadística descriptiva y figuras
-│   └── 02_formativa2_modelo.ipynb  # regresión logística: odds ratios, VIF, métricas y ROC
+│   ├── 01_formativa1_eda.ipynb     # Sumativa 1: descriptiva, intervalos y pruebas de hipótesis
+│   ├── 02_formativa2_modelo.ipynb  # Formativa 2: regresión logística (práctica para la S3)
+│   └── 03_sumativa2_validacion.ipynb # Sumativa 2: bootstrap, permutación, Monte Carlo y robustez
 ├── figuras/            # figuras que genera el notebook
 ├── src/
 │   └── carga_datos.py  # funciones para cargar y revisar los datos
