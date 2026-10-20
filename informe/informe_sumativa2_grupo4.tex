@@ -83,9 +83,9 @@
 \includegraphics[height=4.4cm]{logo_unab.png}\\[1.3cm]
 {\footnotesize\color{gris}\MakeUppercase{Magíster en Ciencia de Datos e Inteligencia Artificial}}\\[0.15cm]
 {\footnotesize\color{grisclaro}MCDI501: Estadística Computacional para la Toma de Decisiones}\\[2.0cm]
-{\Large\bfseries\color{negro} Evaluación Formativa 2}\\[0.45cm]
+{\Large\bfseries\color{negro} Evaluación Sumativa 2}\\[0.45cm]
 {\large\color{negro} Validación, Simulación y Métodos de Remuestreo}\\[1.0cm]
-{\small\itshape\color{gris} Informe técnico grupal}
+{\small\itshape\color{gris} Informe técnico grupal \textperiodcentered\ 20\,\%}
 \end{center}
 \vspace{1.6cm}
 \begin{flushleft}
@@ -103,9 +103,11 @@ Repositorio GitHub:  & \proyRepo \\
 \clearpage
 \pagenumbering{arabic}
 \begin{infobox}
-\textbf{Fase del proyecto:} Fase 3: Desarrollo del proyecto\qquad\textbf{Modalidad:} Grupal\\
-\textbf{Entregables:} este informe (PDF) \textperiodcentered\ notebook \path{notebooks/02_formativa2_validacion.ipynb} \textperiodcentered\ archivo \path{data/processed/resultados_validados_f2.csv}\\
-\textbf{Resultado de aprendizaje (RA2):} implementar métodos computacionales de simulación y remuestreo para apoyar la toma de decisiones en escenarios complejos.\quad\textbf{Indicadores:} ID2.1, ID2.2, ID2.3.
+\textbf{Fase del proyecto:} Fase 3: Desarrollo del proyecto\\
+\textbf{Modalidad:} Grupal\qquad\textbf{Ponderación:} 20\,\% de la nota final\\
+\textbf{Entregables:} este informe (PDF) \textperiodcentered\ notebook \path{notebooks/02_sumativa2_validacion.ipynb} \textperiodcentered\ archivo de resultados validados \path{data/processed/resultados_validados_s2.csv}\\
+\textbf{Resultado de aprendizaje (RA2):} implementar métodos computacionales de simulación y remuestreo para apoyar la toma de decisiones en escenarios complejos.\quad\textbf{Indicadores:} ID2.1, ID2.2, ID2.3.\\
+\textbf{Prerrequisito:} Sumativa 1.
 \end{infobox}
 \begin{conexionbox}
 Todo el trabajo se construye sobre los resultados de nuestra Sumativa 1 (\path{notebooks/01_formativa1_eda.ipynb}): los intervalos clásicos de la Tabla 2, la prueba \textit{t} de Welch de la humedad, la prueba $\chi^2$ de la nubosidad, la prueba \textit{z} de ``¿llovió hoy?'' y las correlaciones de la Figura 3. Cada sección valida o pone a prueba uno de esos resultados. El dataset tiene 145.460 registros diarios de 49 ciudades (2007--2017); la variable objetivo es \texttt{RainTomorrow} (llueve al día siguiente en el 22,4\,\% de los días). Todos los cálculos usan la semilla 42.
@@ -136,7 +138,7 @@ Prop. lluvia mañana & 0,2242 & [0,2220; 0,2263] & [0,2220; 0,2263] & [0,2220; 0
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{f2_fig_bootstrap.png}
+\includegraphics[width=\textwidth]{s2_fig_bootstrap.png}
 \caption{Distribuciones bootstrap de los cuatro parámetros con los intervalos clásico, percentil y BCa (las líneas se superponen). La línea sólida es la estimación puntual.}
 \end{figure}
 
@@ -152,7 +154,7 @@ Validamos dos pruebas de la S1 con tests de permutación de 10.000 repeticiones 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.92\textwidth]{f2_fig_permutacion.png}
+\includegraphics[width=0.92\textwidth]{s2_fig_permutacion.png}
 \caption{Distribuciones bajo $H_0$ (10.000 permutaciones). En ambos casos el valor observado queda muy fuera del rango del azar.}
 \end{figure}
 
@@ -163,7 +165,7 @@ Evaluamos cinco correlaciones de la S1 con intervalos bootstrap al 95\,\% (3.000
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.78\textwidth]{f2_fig_correlaciones.png}
+\includegraphics[width=0.78\textwidth]{s2_fig_correlaciones.png}
 \caption{Intervalos bootstrap al 95\,\% de cinco correlaciones de la S1. Son tan estrechos que quedan tapados por el punto.}
 \end{figure}
 
@@ -176,7 +178,7 @@ El modelo es coherente con los datos: la proporción de lluvia de largo plazo qu
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.92\textwidth]{f2_fig_montecarlo.png}
+\includegraphics[width=0.92\textwidth]{s2_fig_montecarlo.png}
 \caption{(a) Días con lluvia en 10.000 meses simulados, con el intervalo del 95\,\%. (b) Convergencia de la media simulada al valor teórico.}
 \end{figure}
 
@@ -205,7 +207,7 @@ Días independientes & 7 & 1,54 & 1,10 & [0; 4] & 3,9\,\%\\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.66\textwidth]{f2_fig_escenarios.png}
+\includegraphics[width=0.66\textwidth]{s2_fig_escenarios.png}
 \caption{Días con lluvia en 30 días con y sin persistencia: misma media, distinta dispersión.}
 \end{figure}
 
@@ -221,7 +223,7 @@ La media es la misma en los dos modelos, pero el riesgo no: con persistencia los
 En síntesis, son confiables la diferencia de humedad, la asociación con la nubosidad (en las estaciones que la miden), las correlaciones y la persistencia de la lluvia. Requieren cautela la media de la lluvia y la precisión de la proporción global.
 
 \section{Preparación para la Sumativa 3}
-La Tabla~\ref{tab:val} resume qué resultados de la S1 quedaron validados (también en \path{data/processed/resultados_validados_f2.csv}).
+La Tabla~\ref{tab:val} resume qué resultados de la S1 quedaron validados (también en \path{data/processed/resultados_validados_s2.csv}).
 
 \begin{table}[H]
 \centering\small

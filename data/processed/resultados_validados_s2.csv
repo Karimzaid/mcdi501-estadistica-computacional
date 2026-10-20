@@ -1,4 +1,4 @@
-Resultado,Validación en F2,Estado
+Resultado,Validación en S2,Estado
 Temperatura máxima media,"Clásico, percentil y BCa coinciden",Robusto
 Humedad media 3 pm,"Clásico, percentil y BCa coinciden",Robusto
 Lluvia diaria media,"Intervalos coinciden, pero la media es muy sensible a días extremos",Cautela: preferir mediana
